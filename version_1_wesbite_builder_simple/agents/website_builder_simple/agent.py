@@ -6,6 +6,10 @@
 #   generates a complete HTML+CSS+JS webpage, and uses a tool to save it as a file.
 # =============================================================================
 
+import os
+import sys
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..")))
+
 # Import the base class for a language-model-powered agent from Google ADK.
 from google.adk.agents import LlmAgent
 

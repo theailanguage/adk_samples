@@ -1,0 +1,9 @@
+[project]
+name = "version-1-wesbite-builder-simple"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "google-adk>=1.2.1",
+]

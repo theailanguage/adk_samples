@@ -40,21 +40,21 @@ version_1_website_builder_simple
 ### 1. Clone the Repo
 
 ```bash
-git clone https://github.com/yourusername/website-builder-simple-agent.git
-cd website-builder-simple-agent
+git clone https://github.com/theailanguage/adk_samples.git
 ```
 
 ### 2. Set Up Python Environment
-
+Required - Python 3.11+, uv, vs code and git
 ```bash
-python -m venv .venv
+cd adk_samples/version_1_website_builder_simple
+uv venv
 source .venv/bin/activate  # or .venv\Scripts\activate.bat on Windows
-pip install google-adk
+uv sync --all-groups
 ```
 
 ### 3. Add Your API Key
 
-Create a `.env` file in the project root:
+Create a `.env` file in the project root inside version_1_website_builder_simple:
 
 ```env
 GOOGLE_API_KEY=your-google-api-key
@@ -68,17 +68,18 @@ You can get your API key from [Google AI Studio](https://makersuite.google.com/a
 ### 4. Run the Agent UI
 
 ```bash
-adk web
+cd adk_samples/version_1_website_builder_simple
+adk web ./agents
 ```
 
-Then open `http://localhost:8000` in your browser and select `website_builder_simple`.
+Then open `http://localhost:8000` in your browser and select `website_builder_simple` from the agents list.
 
 ---
 
 ## 💬 Example Prompt
 
 ```
-Create a webpage with a pink background and a green heading that says Hello ADK!
+Create a webpage with a pink background and a green heading that says Hello ADK! Write this to an output file using tht tool.
 ```
 
 This will generate a complete `.html` file in the `output/` folder.

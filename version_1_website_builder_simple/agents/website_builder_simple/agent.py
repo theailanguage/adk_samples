@@ -22,28 +22,27 @@ from utils.file_loader import load_instructions_file
 # -----------------------------------------------------------------------------
 # Define the root LLM agent for this app. It is a single-agent app (no sub-agents).
 # -----------------------------------------------------------------------------
-root_agent = LlmAgent(
-    name="website_builder_simple",  # Unique name for the agent; also shown in the UI.
+# root_agent = LlmAgent(
+#     name="website_builder_simple",  # Unique name for the agent; also shown in the UI.
 
-    model="gemini-flash-latest",   # The ID of the Gemini model used to generate responses.
+#     model="gemini-flash-latest",   # The ID of the Gemini model used to generate responses.
 
-    # The prompt/instruction that tells the agent what kind of behavior to exhibit.
-    # It is loaded from a file
-    instruction=load_instructions_file("agents/website_builder_simple/instructions.txt"),
+#     # The prompt/instruction that tells the agent what kind of behavior to exhibit.
+#     # It is loaded from a file
+#     instruction=load_instructions_file("agents/website_builder_simple/instructions.txt"),
 
-    # A short summary of what the agent does.
-    # It is loaded from a file
-    description=load_instructions_file("agents/website_builder_simple/description.txt"),
+#     # A short summary of what the agent does.
+#     # It is loaded from a file
+#     description=load_instructions_file("agents/website_builder_simple/description.txt"),
 
-    # A list of tools the agent can invoke during execution.
-    # In this case, just one: a function that writes the generated HTML to a file.
-    tools=[write_to_file],
-)
+#     # A list of tools the agent can invoke during execution.
+#     # In this case, just one: a function that writes the generated HTML to a file.
+#     tools=[write_to_file],
+# )
 
 # Bonus - here is how you can use claude instead of gemini. Uncomment this block to use
 # Make sure to run `uv add anthropic`
 # and set the `ANTHROPIC_API_KEY` environment variable in your `.env` file first.
-"""
 from google.adk.models import LLMRegistry
 from google.adk.models.anthropic_llm import AnthropicLlm
 
@@ -58,4 +57,3 @@ root_agent = LlmAgent(
     description=load_instructions_file("agents/website_builder_simple/description.txt"),
     tools=[write_to_file],
 )
-"""

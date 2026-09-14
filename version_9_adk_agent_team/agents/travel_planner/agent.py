@@ -47,7 +47,8 @@ root_agent = Agent(
     # Specify the core Gemini language model that powers the coordinator.
     # The coordinator receives user prompts and determines which subagent 
     # to delegate to based on their descriptions.
-    model="gemini-flash-latest",  # Canonical Gemini model
+    # model="gemini-flash-latest",  # Canonical Gemini model
+    model="gemini-2.5-flash",  # Canonical Gemini model
     
     # Registers the specialized worker sub-agents that this coordinator can manage.
     # When the coordinator agent requires specific sub-tasks, it relies on the ADK's 

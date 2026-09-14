@@ -8,4 +8,5 @@ dependencies = [
     "google-adk>=1.2.1",
     "google-genai>=1.19.0",
     "rich>=14.0.0",
+    "anthropic"
 ]

@@ -1,4 +1,43 @@
+# Python bytecode & cache
 __pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Environments & packages
 .venv/
+venv/
+ENV/
+env/
+dist/
+build/
+*.egg-info/
+
+# Environment variables & secrets
 .env
+.env.*
+!.env.example
+
+# Operating System files
+.DS_Store
+**/.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+Thumbs.db
+Desktop.ini
+
+# Agent & ADK internal artifacts
+.agent/
+**/.agent/
+.adk/
+**/.adk/
+*.db
+session.db
+
+# Output directory
 output/
